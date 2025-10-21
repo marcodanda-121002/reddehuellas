@@ -1,0 +1,65 @@
+.banner{
+    background-image: url(./BannerPaginadeInicio.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    height: 450px;
+    padding-top: 1%;
+}
+
+.uaa{
+    background-color: rgb(252, 252, 252);
+    color: white;
+    font-size: 25px;
+    text-align: left;
+    width: fit-content;
+    opacity: 100%;
+    left: 8%;
+    top: 0%;
+    position: relative;
+    border-radius: 20px;
+}
+
+.col{
+    display: flex;
+    justify-content: center;
+}
+
+.estilo-barra{
+    background-color: #001F60;
+}
+
+.button-size{
+    padding: 2%;
+    border: 3px solid transparent;
+    a{
+        text-decoration: none;
+        color: white;
+    }
+}
+
+.button-size:hover{
+    border: 3px solid;
+    border-color: white;
+}
+
+/*.text {
+    font-family: sans-serif;
+    color: white;
+}*/
+
+.col-inside{
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    text-align: left;
+    width: fit-content;
+    padding-left: 3%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-right: 30%;
+    opacity: 70%;
+    position: absolute;
+    left: 10%;
+    top: 50%;
+}
