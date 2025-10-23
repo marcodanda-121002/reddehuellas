@@ -1,54 +1,117 @@
 <!DOCTYPE html>
-<html>
-<!--Inicio de menú para inicio-->
+<html lang="en">
 
-    <head>
-        <link rel="stylesheet" href="SHORTCUT.css">
-        
-        <div class="col estilo-barra">
-        
-        <div class="button-size boton-hover text">
-            <a href="Página de Inicio.html"> Inicio </a>
-        </div> 
+<head>
+  <meta charset="utf-8">
+  <title>Red de Huellas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg" href="/favicon.svg">
+  <!-- Google Fonts CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Self host font -->
+  <!-- <link rel="preload" href="{{ '/assets/fonts/playfair-display.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin> -->
+  <link href="/assets/style.css" rel="stylesheet">
 
-        <div class="button-size">
-            <a href="Ponencias.html">Ponencias</a>
-         </div>
 
-        <div class="button-size boton-hover">
-            <a href="Cursos.html">Cursos</a>
+      <!--OPEN GRAPH
+  {% if page.description %}<meta name="description" content="{{ page.description }}" />{% endif %}
+  {% if page.meta_title %}<meta property="og:title" content="{{ page.meta_title }}"/>{% else %}<meta property="og:title" content="{{ page.title }}"/>{% endif %}
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="{{ url }}"/>
+  {% if page.image %}<meta property="og:image" content="{{ page.image | absolute_url }}"/>{% endif %}
+  {% if page.description %}<meta property="og:description" content="{{ page.description }}"/>{% endif %}
+  <meta name="twitter:card" content="summary"/>
+  {% if site.data.seo.meta_twitter_site %}<meta name="twitter:site" content="{{ site.seo.meta_twitter_site }}"/>{% endif %}
+  {% if site.data.seo.meta_twitter_creator %}<meta name="twitter:creator" content="{{ site.seo.meta_twitter_creator }}"/>{% endif %}
+    -->
+
+</head>
+
+<body class='page {{layout.bodyClass}}'>
+  <div id="wrapper" class="wrapper">
+      <div class='header header-extra'>
+        <div class="container justify-content-center">
+          <div class="logo">
+            <a href="/"><img width="150" alt="Logo de Red de Huellas" src="/assets/logo.svg" /></a>
+          </div>
+
+          <div class="logo-mobile">
+              <a href="/"><img alt="Logo de Red de Huellas" src="/assets/logo.svg" /></a>
+          </div>
         </div>
-        
-        <div class="button-size boton-hover">
-            <a href="Registro.html">Registro</a>
-            
-        </div>
-     </div>
+      </div>
 
-<!--Fin de menú para inicio-->
+    <div class="page-home">
 
+        <div class="intro">
+          <div class="container">
+            <div class="row justify-content-start">
+              <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
+                <h1>¡Conoce a Red de Huellas!</h1>
+                <p>Conéctate con veterinarios y expertos en el cuidado de perros y gatos comprometidos con la salud, bienestar y felicidad de tus mascotas.<br><br>
+                    Encuentra profesionales cercanos que ofrecen servicios de atención médica, asesoría nutricional y cuidado preventivo para mantener a tus compañeros peludos sanos y felices.</p>
+              </div>
 
-<!--Inicio de banner para inicio-->
-
-        <div class="banner">
-            <div class="uaa">
-                <div class="uaa">
-                            <img src="./UAA-LOGO.png" height="180">
-                    </div>
+              <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
+                <img alt="Bono - Nuestra mascota" class="intro-image intro-image-hide-mobile" src="/assets/bono.svg" />
+              </div>
             </div>
+          </div>
         </div>
 
-    <!--Inicio de banner con texto-->
-            <div class="col col-inside">
-                <a>Lorem Ipsum Me falta la Info</a>
+        <div class="strip">
+          <div class="container pt-6 pb-6 pb-md-10">
+            <div class="row justify-content-start">
+              {% assign limit = site.home.limit_services | default: 6 %}
+              {% for service in site.services limit: limit %}
+              <div class="col-12 col-md-4 mb-1">
+                <div class="service service-summary">
+                  <div class="service-content">
+                    <h2 class="service-title">
+                      <a href="{{ service.url | relative_url }}">{{ service.title }}</a>
+                    </h2>
+                    <p>{{ service.excerpt | markdownify | strip_html | truncate: 100 }}</p>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
             </div>
-    <!--Fin de banner con texto-->
-        
-        
-<!--Fin de banner para inicio-->     
-    </head>
-    <body>
+            <div class="row justify-content-center">
+              <div class="col-auto">
+                <a class="button button-primary" href="{{ "services" | relative_url }}">View All Services</a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    </body>
+    </div>
 
+
+
+
+
+
+  </div>
+
+
+  <div class="sub-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="sub-footer-inner">
+              <div class="social">
+                <a href="https://www.tiktok.com/@reddehuellas" target="blank"><img src="/assets/socials/tiktok.svg" title="Página de TikTok" alt="Logo de TikTok" /></a>
+                <a href="https://www.instagram.com/reddehuellas" target="blank"><img src="/assets/socials/instagram.svg" title="Página de Instagram" alt="Logo de Instagram" /></a>
+              </div>
+            <div class="copyright">&copy; Red de Huellas 2025</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="/assets/scripts.js"></script>
+</body>
 </html>
