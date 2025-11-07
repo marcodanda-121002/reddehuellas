@@ -2,84 +2,6 @@
    This file contains only project-specific CSS (no vendor/bootstrap rules).
    Bootstrap should be added to the HTML via external CDN links. */
 
-/* Hamburgers (customized) -------------------------------------------------- */
-.hamburger {
-    padding: 15px 15px;
-    display: inline-block;
-    cursor: pointer;
-    transition-property: opacity, filter;
-    transition-duration: 0.15s;
-    transition-timing-function: linear;
-    font: inherit;
-    color: inherit;
-    text-transform: none;
-    background-color: rgba(0, 0, 0, 0);
-    border: 0;
-    margin: 0;
-    overflow: visible;
-}
-.hamburger:hover {
-    opacity: 0.7;
-}
-.hamburger.is-active:hover {
-    opacity: 0.7;
-}
-.hamburger.is-active .hamburger-inner,
-.hamburger.is-active .hamburger-inner::before,
-.hamburger.is-active .hamburger-inner::after {
-    background-color: #fff;
-}
-.hamburger-box {
-    width: 36px;
-    height: 23px;
-    display: inline-block;
-    position: relative;
-}
-.hamburger-inner {
-    display: block;
-    top: 50%;
-    margin-top: -1.5px;
-}
-.hamburger-inner,
-.hamburger-inner::before,
-.hamburger-inner::after {
-    width: 36px;
-    height: 3px;
-    background-color: #e5261f;
-    border-radius: 3px;
-    position: absolute;
-    transition-property: transform;
-    transition-duration: 0.15s;
-    transition-timing-function: ease;
-}
-.hamburger-inner::before,
-.hamburger-inner::after {
-    content: "";
-    display: block;
-}
-.hamburger-inner::before { top: -10px; }
-.hamburger-inner::after { bottom: -10px; }
-
-.hamburger--slider .hamburger-inner { top: 1.5px; }
-.hamburger--slider .hamburger-inner::before {
-    top: 10px;
-    transition-property: transform, opacity;
-    transition-timing-function: ease;
-    transition-duration: 0.15s;
-}
-.hamburger--slider .hamburger-inner::after { top: 20px; }
-
-.hamburger--slider.is-active .hamburger-inner {
-    transform: translate3d(0, 10px, 0) rotate(45deg);
-}
-.hamburger--slider.is-active .hamburger-inner::before {
-    transform: rotate(-45deg) translate3d(-5.1428571429px, -7px, 0);
-    opacity: 0;
-}
-.hamburger--slider.is-active .hamburger-inner::after {
-    transform: translate3d(0, -20px, 0) rotate(-90deg);
-}
-
 /* Basic typographic tweaks ------------------------------------------------ */
 p {
     line-height: 26px;
@@ -366,29 +288,6 @@ ul li, ol li {
     overflow: hidden;
 }
 
-/* Smaller hamburger variant (overrides) ---------------------------------- */
-.hamburger {
-    padding: 10px 0 10px 10px;
-    outline: none;
-    z-index: 30;
-    cursor: pointer;
-}
-@media (min-width: 768px) { .hamburger { display: none; } }
-.hamburger:focus { outline: none; }
-.hamburger .hamburger-inner,
-.hamburger .hamburger-inner::before,
-.hamburger .hamburger-inner::after {
-    background: #e5261f;
-}
-.hamburger .hamburger-inner::after {
-    width: 18px;
-    right: 0;
-}
-.hamburger.is-active .hamburger-inner::after {
-    width: inherit;
-    right: unset;
-}
-
 /* Buttons (project-specific) -------------------------------------------- */
 .button {
     white-space: nowrap;
@@ -601,10 +500,9 @@ ul li, ol li {
 
 /* Strips and decorative sections ---------------------------------------- */
 .strip {
-    background: #ce7f89;
     background-repeat: no-repeat;
 }
-.strip-white { background-color: #fff; }
+.strip-coral { background-color: #ce7f89; }
 .strip-grey { background-color: #fff6f8; }
 .strip-diagonal {
     transform: skewY(5deg);
@@ -732,3 +630,23 @@ body {
 }
 
 /* End of custom styles */
+
+
+/*---- Nosotros ----*/
+/* No usados aún */
+
+.nosotros-item {
+
+}
+
+.nosotros-imagen {
+
+}
+
+.nosotros-texto {
+
+}
+
+.nosotros-header {
+
+}
