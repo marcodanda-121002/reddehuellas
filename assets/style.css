@@ -527,20 +527,29 @@ body {
 /* Header ------------------------------------------------------------------ */
 .header {
     background-color: #59bebe;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #fff6f8;
+    display: block;
+    text-align: center;
     padding: 10px 0;
 }
 .header .container {
     display: flex;
+    justify-content: center;
     align-items: center;
+    gap: 0.5rem
 }
+
+.header img,
+.header svg {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .header.header-absolute {
     position: absolute;
     z-index: 10;
     width: 100%;
+    left: 0;
+    top: 0;
 }
 .lock-scroll .header.header-absolute {
     position: static;
@@ -551,8 +560,6 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 60px;
-    padding-bottom: 60px;
     overflow: hidden;
 }
 
