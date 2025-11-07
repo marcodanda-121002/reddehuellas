@@ -563,10 +563,6 @@ body {
     overflow: hidden;
 }
 
-@media (min-width: 768px) {
-    .intro { padding-top: 70px; padding-bottom: 70px; }
-}
-
 .intro-info-caja {
     background-color: #b8cdc5;
 }
