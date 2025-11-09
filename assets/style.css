@@ -556,6 +556,18 @@ body {
     text-align: center;
 }
 
+/* Aplicar margen superior en móvil para todos los .nosotros-item a partir del segundo */
+#nosotros .row > div + div .nosotros-item {
+    margin-top: 1.5rem;
+}
+
+@media (min-width: 992px) {
+    /* En pantallas más grandes (desktop/tablet) las columnas están lado a lado; quitar el margen */
+    #nosotros .row > div + div .nosotros-item {
+        margin-top: 0;
+    }
+}
+
 /*---- Strip ----*/
 .strip {
     background-repeat: no-repeat;
