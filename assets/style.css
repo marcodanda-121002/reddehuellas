@@ -525,7 +525,7 @@ body {
 .intro-mascotas-foto {
   width: 100%;
   transition: transform 0.3s ease;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 @media (min-width: 992px) {
@@ -553,13 +553,33 @@ body {
 }
 
 .nosotros-header {
-
+    text-align: center;
 }
 
 /*---- Strip ----*/
 .strip {
     background-repeat: no-repeat;
     background-color: #ce7f89;
+}
+
+.descarga-header {
+    color: #e4ecee;
+}
+
+.huella-svg {
+  transition: filter 180ms ease, transform 180ms ease;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.huella-svg:hover,
+.huella-svg:focus {
+  filter: brightness(0.77);
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .huella-svg { transition: none; transform: none; }
 }
 
 /*---- Sub footer ----*/
