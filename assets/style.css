@@ -60,8 +60,13 @@ ul li, ol li {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background-color: #59bebe;
+}
+
+.wrapper {
     background-color: #e4ecee;
 }
+
 .page .wrapper {
     flex: 1 0 0;
 }
