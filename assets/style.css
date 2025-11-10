@@ -1,3 +1,56 @@
+/* Map embed styles (mobile-first)
+   - Robust, simple approach using a responsive wrapper with padding-top fallback
+   - Mobile-first: 4:3 (75% padding-top). Wider screens: 16:9 (56.25%).
+   - Wrapper clips corners using border-radius to match Bootstrap .card (0.25rem).
+   - Usage: wrap iframe in
+       <div class="map-wrapper"><iframe class="map-embed" ...></iframe></div>
+*/
+.map-wrapper {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.25rem; /* match default Bootstrap .card radius */
+    position: relative;
+    /* mobile-first ratio 4:3 */
+    padding-top: 75%;
+}
+
+/* iframe fills the wrapper (fallback for browsers without aspect-ratio) */
+.map-wrapper iframe.map-embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+    /* border-radius applied on wrapper clips corners; keep on iframe for safety */
+    border-radius: 0.25rem;
+}
+
+/* Wider aspect on larger viewports */
+@media (min-width: 576px) {
+    .map-wrapper { padding-top: 56.25%; } /* 16:9 */
+}
+
+/* Optional class for iframes (keeps same rounding and makes explicit sizing) */
+.map-embed {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+}
+
+/* Ensure iframes inside cards inherit rounding and don't overflow */
+.card .map-embed,
+.card iframe.map-embed {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.25rem;
+}
+
 /* Custom styles for Red de Huellas
    This file contains only project-specific CSS (no vendor/bootstrap rules).
    Bootstrap should be added to the HTML via external CDN links. */
@@ -53,6 +106,15 @@ ul, ol {
 ul li, ol li {
     padding: 0;
     margin: 0;
+}
+
+.link {
+    color: #59bebe !important;
+    text-decoration: none;
+}
+
+.link p {
+    color: #59bebe;
 }
 
 /* Page layout ------------------------------------------------------------- */
@@ -556,18 +618,10 @@ body {
 }
 
 /*---- Nosotros ----*/
-/* No usados aún */
-.nosotros-item {
-
-}
-
-.nosotros-imagen {
-
-}
-
-.nosotros-texto {
-
-}
+/* Reservado: estilos para la sección "Nosotros".
+   No hay reglas activas por ahora; se mantiene este comentario como marcador
+   evitando reglas vacías que generan advertencias en linters.
+*/
 
 .nosotros-header {
     text-align: center;
