@@ -505,17 +505,18 @@ body {
 }
 
 .intro-info-header {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: #2f2f41;
 }
 
 .intro-info-text {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 26px;
     color: #5c5a5a;
 }
 
+/*
 @media (min-width: 1200px) {
     .intro-info-header {
         font-size: 2.75rem;
@@ -526,6 +527,7 @@ body {
         line-height: 30px;
     }
 }
+*/
 
 .intro-mascotas-foto {
   width: 100%;
@@ -534,6 +536,16 @@ body {
 }
 
 @media (min-width: 992px) {
+  .intro-mascotas-foto {
+    width: 105%;
+  }
+
+  .intro-mascotas {
+    transform: translate(-5%, 0%);
+  }
+}
+
+@media (min-width: 1200px) {
   .intro-mascotas-foto {
     width: 110%;
   }
