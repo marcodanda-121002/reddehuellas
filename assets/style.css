@@ -611,6 +611,27 @@ body {
   .huella-svg { transition: none; transform: none; }
 }
 
+/*---- Directorio ----*/
+.directorio-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.directorio-header-img {
+  height: clamp(60px, 8vw, 120px);
+  width: auto;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.directorio-header-title {
+  flex: 1 1 auto;
+  font-size: clamp(1.3rem, 2.2vw, 2rem);
+  color: #2f2f41;
+}
+
 /*---- Sub footer ----*/
 .sub-footer {
     background: #59bebe;
